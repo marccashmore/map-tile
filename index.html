@@ -6,15 +6,24 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-	<title>Basic Javascript Example</title>
+	<title>Basic Streetmap Tile Example</title>
 
-	
-	
 </head>
 
 <body>
+
+  <label for="zoom">Zoom:</label>
+  <input type="number" id="zoom" value="19">
+
+  <label for="x_val">X Value:</label>
+  <input type="number" id="x_val" value="258904">
+
+  <label for="y_val">Y Value:</label>
+  <input type="number" id="y_val" name="y_val" value="172696">
+
+  <button onclick="getTile()">Get Tile</button>
 	
-	<p id="demo"></p>
+  <p id="tileId"></p>
 
 </body>
 
