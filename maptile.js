@@ -6,9 +6,5 @@ function getTile() {
   var tileURL = "https://tile.openstreetmap.org/" + zoom + "/" + x_val + "/" + y_val + ".png"
   document.getElementById("tileId").innerHTML = tileURL;
 
-  src = tileURL,
-  img = document.createElement('img');
-
-  img.src = src;
-  document.body.appendChild(img);
+  document.getElementById("tile-img").src = tileURL;
 }
