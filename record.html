@@ -1,1 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>Example Records</title>
+
+</head>
+
+<body>
+
+    "source" : [ "Alma" ],
+    "type" : [ "map" ],
+    "language" : [ "ger" ],
+    "title" : [ "Geologische Übersichtskarte der Rheinprovinz und der Provinz Westfalen " ],
+    "subject" : [ "Geology -- Germany$$QGeology -- Germany -- Maps", "Germany" ],
+    "format" : [ "Scale 1:500,000 (E 5°50'-E 9°40'/N 52°30'-N 49°10')", "1 map : colour ; 81 x 58 cm" ],
+    "identifier" : [ "$$COCLC$$V(OCoLC)726764262;$$COCLC$$V(OCoLC)ocn726764262" ],
+    "creationdate" : [ "1866" ],
+    "lds10" : [ "\"Nach der in den Jahren 1855 bis 1865 im Maassstabe von 1:80.000 in 34 Sectionen herausgegebenen, durch die Section Wiesbaden vervollständigten geologischen Karten beider Provinzen und den späteren Arbeiten.\"" ],
+    "creator" : [ "Dechen, H. von (Heinrich), 1800-1889.$$QDechen, H. von" ],
+    "publisher" : [ "Berlin : Simon Schropp'sche Hof-Landkartenhandlung" ],
+    "mms" : [ "999805300500002081" ],
+    "ld40" : [$$D E0055000 $$E E0094000 $$F N0523000 $$G N0491000]
+    "contributor" : [ "Prussia (Germany). Ministerium der Öffentlichen Arbeiten.$$QPrussia (Germany). Ministerium der Öffentlichen Arbeiten.", "Simon Schropp'sche Hof-Landkartenhandlung.$$QSimon Schropp'sche Hof-Landkartenhandlung.", "Berliner Lithographisches Institut.$$QBerliner Lithographisches Institut." ],
+    "edition" : [ "2te Augabe 1883" ],
+    "genre" : [ "Maps", "Geological maps" ],
+    "relation" : [ "$$Cearlier_title$$VGeologische Übersichtskarte der Rheinprovinz und der Provinz Westfalen$$QGeologische Übersichtskarte der Rheinprovinz und der Provinz Westfalen$$Z999805279700502081" ],
+    "place" : [ "Berlin :" ],
+    "version" : [ "0" ],
+    "lds07" : [ "1 map :" ],
+    "lds44" : [ "im Auftrage des Königl. Ministeriums der öffentlichen Arbeiten, bearbeitet von H. von Dechen." ],
+    "lds45" : [ "202308HWU" ]
+
+  
+  <label for="zoom">Zoom:</label>
+  <input type="number" id="zoom" value="19">
+
+  <label for="lat_val">Latitude:</label>
+  <input type="number" id="lat_val" value="52.20392">
+
+  <label for="lon_val">Longitude:</label>
+  <input type="number" id="lon_val" value="-2.22449">
+
+  <button onclick="getTile()">Get Tile</button>
+	
+  <br></br>
+  <img src="./" id="tile-img" alt="" />
+
+
+  <p id="tileId"></p>
+
+</body>
+
+</html>
+
+<script type="text/javascript" src="maptile.js"></script>
