@@ -11,10 +11,11 @@ scriplet to identify the prmSearchBarAfter directive which you will plugin to"
 
 So I think this is asking us to do something like this - https://www.freecodecamp.org/news/what-are-bookmarklets/
 
-Which should end up with results like this -https://github.com/ExLibrisGroup/primo-explore-package/blob/master/help_files/showDirectives.png
+Which should end up with results like this -
+https://github.com/ExLibrisGroup/primo-explore-package/blob/master/help_files/showDirectives.png
 
-But couldnt work out how to get that to work - cos how do you "open" a bookedmarked page ontop of another page?
-And is this just to get the "key" for the directive we need to edit?
+Which I have got to work but dont really understand the point of it? And is this just to get the "key" for the directive we need to edit? So in this case
+prmSearchBarAfter which we already know cos it tells us in the thing
 
 Found that github which has all the instructions and is from the makers of the software - interestingly it tells you to do the "hello world" in a different way.
 https://github.com/ExLibrisGroup/primo-explore-package/blob/master/VIEW_CODE/js/README.md
