@@ -1,0 +1,49 @@
+Hi mate, 
+
+So.
+
+I think maybe need to try and understand Angular a bit more to get this to work. 
+
+Spent quite a while trying different things but am probably missing something q fundamental. 
+
+"Use the showDirectives (located in the root directory of this package is the showDirectives.txt file , just add the content of the file as a bookmark to your browser) 
+scriplet to identify the prmSearchBarAfter directive which you will plugin to"
+
+So I think this is asking us to do something like this - https://www.freecodecamp.org/news/what-are-bookmarklets/
+
+Which should end up with results like this -https://github.com/ExLibrisGroup/primo-explore-package/blob/master/help_files/showDirectives.png
+
+But couldnt work out how to get that to work - cos how do you "open" a bookedmarked page ontop of another page?
+And is this just to get the "key" for the directive we need to edit?
+
+Found that github which has all the instructions and is from the makers of the software - interestingly it tells you to do the "hello world" in a different way.
+https://github.com/ExLibrisGroup/primo-explore-package/blob/master/VIEW_CODE/js/README.md
+
+"Edit the primo-explore/custom/js/custom.js file and add a component declaration for myInstitutionComponent and a component declaration for the prmSearchBarAfter directive
+
+app.component('myInstitutionComponent', {
+});
+app.component('prmSearchBarAfter', {
+});
+
+Add the template property with your static message
+
+app.component('myInstitutionComponent', {
+    template: `<span style="margin-left: 40%;">Hello World</span>`
+});
+
+Add the template property with your component template (myInstitutionComponent)
+
+app.component('prmSearchBarAfter', {
+        bindings: {parentCtrl: `<`},
+        template: `<my-institution-component></my-institution-component>`    
+});
+
+I tried doing this but also didnt work. 
+
+Maybe you could see if you can work out how to get the directives.txt think to work as a bookmark and if you can interpret the other stuff more?!
+Cos maybe it is saying you can just test this stuff by editing the custom.js in browser?
+
+Also found this which is interesting - https://www.carli.illinois.edu/sites/files/i-share/documentation/Customization_with_Javascript_Berry.pdf
+
+
