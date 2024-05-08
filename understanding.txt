@@ -15,7 +15,7 @@ Which should end up with results like this -
 https://github.com/ExLibrisGroup/primo-explore-package/blob/master/help_files/showDirectives.png
 
 Which I have got to work but dont really understand the point of it? And is this just to get the "key" for the directive we need to edit? So in this case
-prmSearchBarAfter which we already know cos it tells us in the thing
+prmSearchBarAfter which we already know cos it tells us in the thing.
 
 Found that github which has all the instructions and is from the makers of the software - interestingly it tells you to do the "hello world" in a different way.
 https://github.com/ExLibrisGroup/primo-explore-package/blob/master/VIEW_CODE/js/README.md
@@ -42,8 +42,7 @@ app.component('prmSearchBarAfter', {
 
 I tried doing this but also didnt work. 
 
-Maybe you could see if you can work out how to get the directives.txt think to work as a bookmark and if you can interpret the other stuff more?!
-Cos maybe it is saying you can just test this stuff by editing the custom.js in browser?
+Can you excute js in the browser using inspect elements cos maybe it is saying you can just test this stuff by editing the custom.js in browser?
 
 Also found this which is interesting - https://www.carli.illinois.edu/sites/files/i-share/documentation/Customization_with_Javascript_Berry.pdf
 
