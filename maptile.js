@@ -1,4 +1,7 @@
 function getTile() {
+  
+  
+  
   var lat_val = document.getElementById("lat_val").value;
   var lon_val = document.getElementById("lon_val").value;
   var zoom = document.getElementById("zoom").value;
