@@ -1,0 +1,67 @@
+function getTileConvert() {
+    
+    CoordinateArray = document.getElementById("raw-cords").value
+    CoordinateArray = {}
+
+    function getNewRegexMatches (string, regex, index) {
+        index || (index = 1); // default to the first capturing group
+            var matches = [];
+            var match;
+            while (match = regex.exec(string)) {
+                matches.push(match[index]);
+            }
+            return matches; 
+    }
+  
+    function rebuildCoordinatesArray (inputString) {
+        var newcoordinates;
+        if (RegExp(/\$\$D([a-zA-Z])/).test(inputString)) {
+            coordinates = getNewRegexMatches(inputString, /\$\$[DEFG](.{8})/g);
+            for (var i = 0; i < coordinates.length; i++) {
+                var hemisphere = coordinates[i].substr(0, 1);
+                var degrees = parseInt(coordinates[i].substr(1, 3));
+                var minutes = parseInt(coordinates[i].substr(4, 2));
+                var seconds = parseInt(coordinates[i].substr(6, 2));
+
+                var decimalValue;
+                if (hemisphere == "N" || hemisphere == "E")
+                    coordinates[i] = degrees + ((minutes + (seconds / 60)) / 60);
+                else
+                    coordinates[i] = 0 - (degrees + ((minutes + (seconds / 60)) / 60));
+
+            }
+        }
+    
+        //Populate array with Degrees values
+        else if (RegExp(/\$\$D(\d|-)/).test(inputString)) {
+            coordinates = getNewRegexMatches(inputString, /\$\$\w([\d\.-]+)/g);
+        }
+
+        //Round the numbers to 6 decimal points
+        if(coordinates) {
+            for (var i = 0; i < coordinates.length; i++) {
+                coordinates[i] = (Math.round(coordinates[i] * 1000000) / 1000000);
+            }
+        }
+        return coordinates;
+
+    };
+
+    document.getElementById("coordincheck").innerHTML = coordinates
+
+    //var lat_val = document.getElementById("lat_val").value;
+    //var lon_val = document.getElementById("lon_val").value;
+    //var zoom = document.getElementById("zoom").value;
+  
+    //var x_val = lon2tile(Number(lon_val), zoom)
+    //var y_val = lat2tile(Number(lat_val), zoom)
+  
+    //var tileURL = "https://tile.openstreetmap.org/" + zoom + "/" + x_val + "/" + y_val + ".png"
+    //document.getElementById("tileId").innerHTML = tileURL;
+  
+    //document.getElementById("tile-img").src = tileURL;
+  //}
+  
+  //function lon2tile(lon,zoom) { return (Math.floor(((lon+180)/360)*Math.pow(2,zoom))); }
+  //function lat2tile(lat,zoom)  { return (Math.floor((1-Math.log(Math.tan(lat*Math.PI/180) + 1/Math.cos(lat*Math.PI/180))/Math.PI)/2 *Math.pow(2,zoom))); }
+
