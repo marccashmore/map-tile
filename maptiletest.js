@@ -2,6 +2,8 @@ function getTileConvert() {
     
     var CoordinateArray = document.getElementById("raw-cords").value
     CoordinateArray = {}
+    document.getElementById("coordincheck").innerHTML = CoordinateArray[0]
+    
     var newnewcoordinates
 
     function getNewRegexMatches (string, regex, index) {
