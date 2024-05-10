@@ -16,38 +16,43 @@ function getTileConvert() {
     function rebuildCoordinatesArray (inputString) {
         var newcoordinates;
         if (RegExp(/\$\$D([a-zA-Z])/).test(inputString)) {
-            coordinates = getNewRegexMatches(inputString, /\$\$[DEFG](.{8})/g);
-            for (var i = 0; i < coordinates.length; i++) {
-                var hemisphere = coordinates[i].substr(0, 1);
-                var degrees = parseInt(coordinates[i].substr(1, 3));
-                var minutes = parseInt(coordinates[i].substr(4, 2));
-                var seconds = parseInt(coordinates[i].substr(6, 2));
+            newcoordinates = getNewRegexMatches(inputString, /\$\$[DEFG](.{8})/g);
+            for (var i = 0; i < newcoordinates.length; i++) {
+                var hemisphere = newcoordinates[i].substr(0, 1);
+                var degrees = parseInt(newcoordinates[i].substr(1, 3));
+                var minutes = parseInt(newcoordinates[i].substr(4, 2));
+                var seconds = parseInt(newcoordinates[i].substr(6, 2));
 
                 var decimalValue;
                 if (hemisphere == "N" || hemisphere == "E")
-                    coordinates[i] = degrees + ((minutes + (seconds / 60)) / 60);
+                    newcoordinates[i] = degrees + ((minutes + (seconds / 60)) / 60);
                 else
-                    coordinates[i] = 0 - (degrees + ((minutes + (seconds / 60)) / 60));
+                newcoordinates[i] = 0 - (degrees + ((minutes + (seconds / 60)) / 60));
 
             }
         }
     
         //Populate array with Degrees values
         else if (RegExp(/\$\$D(\d|-)/).test(inputString)) {
-            coordinates = getNewRegexMatches(inputString, /\$\$\w([\d\.-]+)/g);
+            newcoordinates = getNewRegexMatches(inputString, /\$\$\w([\d\.-]+)/g);
         }
 
         //Round the numbers to 6 decimal points
-        if(coordinates) {
-            for (var i = 0; i < coordinates.length; i++) {
-                coordinates[i] = (Math.round(coordinates[i] * 1000000) / 1000000);
+        if(newcoordinates) {
+            for (var i = 0; i < newcoordinates.length; i++) {
+                newcoordinates[i] = (Math.round(newcoordinates[i] * 1000000) / 1000000);
             }
         }
-        return coordinates;
+        return newcoordinates;
 
     };
 
-    document.getElementById("coordincheck").innerHTML = coordinates
+    newcoordinates = rebuildCoordinatesArray(CoordinateArray[0]);
+    centerLongitude = (newcoordinates[0] + newcoordinates[1]) / 2;
+    centerLatitude = (newcoordinates[2] + newcoordinates[3]) / 2;
+
+
+    document.getElementById("coordincheck").innerHTML = newcoordinates
 
     //var lat_val = document.getElementById("lat_val").value;
     //var lon_val = document.getElementById("lon_val").value;
