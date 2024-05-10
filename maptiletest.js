@@ -2,6 +2,7 @@ function getTileConvert() {
     
     var CoordinateArray = document.getElementById("raw-cords").value
     CoordinateArray = {}
+    
     document.getElementById("coordincheck").innerHTML = CoordinateArray[0]
     
     var newnewcoordinates
@@ -55,7 +56,7 @@ function getTileConvert() {
     centerLatitude = (newnewcoordinates[2] + newnewcoordinates[3]) / 2;
 
 
-    document.getElementById("coordincheck").innerHTML = centerLongitude
+    //document.getElementById("coordincheck").innerHTML = centerLongitude
 };
 
     //var lat_val = document.getElementById("lat_val").value;
