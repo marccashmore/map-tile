@@ -47,9 +47,9 @@ function getTileConvert() {
 
     };
 
-    newcoordinates = rebuildCoordinatesArray(CoordinateArray[0]);
-    centerLongitude = (newcoordinates[0] + newcoordinates[1]) / 2;
-    centerLatitude = (newcoordinates[2] + newcoordinates[3]) / 2;
+    newnewcoordinates = rebuildCoordinatesArray(CoordinateArray[0]);
+    centerLongitude = (newnewcoordinates[0] + newnewcoordinates[1]) / 2;
+    centerLatitude = (newnewcoordinates[2] + newnewcoordinates[3]) / 2;
 
 
     document.getElementById("coordincheck").innerHTML = centerLongitude
