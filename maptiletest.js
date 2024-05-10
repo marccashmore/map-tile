@@ -1,7 +1,7 @@
 function getTileConvert() {
     
-    var CoordinateArray = document.getElementById("raw-cords").value
-    CoordinateArray = {}
+    var CoordinateArray = document.getElementById("raw-cords").ariaValueMax
+    CoordinateArray = CoordinateArray.split()
     
     document.getElementById("coordincheck").innerHTML = CoordinateArray[0]
     
