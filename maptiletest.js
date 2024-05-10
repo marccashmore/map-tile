@@ -2,6 +2,7 @@ function getTileConvert() {
     
     var CoordinateArray = document.getElementById("raw-cords").value
     CoordinateArray = {}
+    var newnewcoordinates
 
     function getNewRegexMatches (string, regex, index) {
         index || (index = 1); // default to the first capturing group
@@ -16,7 +17,7 @@ function getTileConvert() {
     function rebuildCoordinatesArray (inputString) {
         var newcoordinates;
         if (RegExp(/\$\$D([a-zA-Z])/).test(inputString)) {
-            newcoordinates = getNewRegexMatches(inputString, /\$\$[DEFG](.{8})/g);
+            newcoordinates = getNewRegexMatches(inputString, /\$\$[defg](.{8})/g);
             for (var i = 0; i < newcoordinates.length; i++) {
                 var hemisphere = newcoordinates[i].substr(0, 1);
                 var degrees = parseInt(newcoordinates[i].substr(1, 3));
