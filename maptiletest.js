@@ -52,7 +52,7 @@ function getTileConvert() {
     centerLatitude = (newcoordinates[2] + newcoordinates[3]) / 2;
 
 
-    document.getElementById("coordincheck").innerHTML = newcoordinates
+    document.getElementById("coordincheck").value = newcoordinates
 
     //var lat_val = document.getElementById("lat_val").value;
     //var lon_val = document.getElementById("lon_val").value;
