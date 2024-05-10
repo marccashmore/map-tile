@@ -53,7 +53,7 @@ function getTileConvert() {
 
 
     document.getElementById("coordincheck").innerHTML = centerLongitude
-}
+};
 
     //var lat_val = document.getElementById("lat_val").value;
     //var lon_val = document.getElementById("lon_val").value;
