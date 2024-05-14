@@ -7,7 +7,8 @@ function getTileConvert() {
     
     var retnewcoordinates
 
-    function getNewRegexMatches (string, regex, index) {
+    var serviceObj={};
+    serviceObj.getRegexMatches=function(string, regex, index) {
         index || (index = 1); // default to the first capturing group
             var matches = [];
             var match;
@@ -17,7 +18,7 @@ function getTileConvert() {
             return matches; 
     }
   
-    function rebuildCoordinatesArray (inputString) {
+    serviceObj.buildCoordinatesArray=function (inputString) {
         var newcoordinates;
         if (RegExp(/\$\$D([a-zA-Z])/).test(inputString)) {
             newcoordinates = getNewRegexMatches(inputString, /\$\$[defg](.{8})/g);
@@ -51,7 +52,7 @@ function getTileConvert() {
 
     };
 
-    retnewcoordinates = rebuildCoordinatesArray(ModCoordinateArray[0]);
+    retnewcoordinates = serviceObj.buildCoordinatesArray(ModCoordinateArray[0]);
     document.getElementById("coordincheck").innerHTML = retnewcoordinates[0]
 
     //var centerLongitude = (newcoordinates[0] + newcoordinates[1]) / 2;
