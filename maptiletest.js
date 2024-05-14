@@ -51,7 +51,7 @@ function getTileConvert() {
 
     };
 
-    newnewcoordinates = rebuildCoordinatesArray(CoordinateArray[0]);
+    newnewcoordinates = rebuildCoordinatesArray(ModCoordinateArray[0]);
     centerLongitude = (newnewcoordinates[0] + newnewcoordinates[1]) / 2;
     centerLatitude = (newnewcoordinates[2] + newnewcoordinates[3]) / 2;
 
