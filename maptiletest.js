@@ -5,7 +5,7 @@ function getTileConvert() {
     
     //document.getElementById("coordincheck").innerHTML = ModCoordinateArray[0]
     
-    var newnewcoordinates
+    var newcoordinates
 
     function getNewRegexMatches (string, regex, index) {
         index || (index = 1); // default to the first capturing group
@@ -51,9 +51,9 @@ function getTileConvert() {
 
     };
 
-    newnewcoordinates = rebuildCoordinatesArray(ModCoordinateArray[0]);
-    centerLongitude = (newnewcoordinates[0] + newnewcoordinates[1]) / 2;
-    centerLatitude = (newnewcoordinates[2] + newnewcoordinates[3]) / 2;
+    newcoordinates = rebuildCoordinatesArray(ModCoordinateArray[0]);
+    var centerLongitude = (newcoordinates[0] + newcoordinates[1]) / 2;
+    var centerLatitude = (newcoordinates[2] + newcoordinates[3]) / 2;
 
 
     document.getElementById("coordincheck").innerHTML = centerLongitude
