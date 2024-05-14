@@ -52,11 +52,12 @@ function getTileConvert() {
     };
 
     newcoordinates = rebuildCoordinatesArray(ModCoordinateArray[0]);
-    var centerLongitude = (newcoordinates[0] + newcoordinates[1]) / 2;
-    var centerLatitude = (newcoordinates[2] + newcoordinates[3]) / 2;
+    document.getElementById("coordincheck").innerHTML = newcoordinates[0]
 
+    //var centerLongitude = (newcoordinates[0] + newcoordinates[1]) / 2;
+    //var centerLatitude = (newcoordinates[2] + newcoordinates[3]) / 2;
 
-    document.getElementById("coordincheck").innerHTML = centerLongitude
+    //document.getElementById("coordincheck").innerHTML = centerLongitude
 };
 
     //var lat_val = document.getElementById("lat_val").value;
