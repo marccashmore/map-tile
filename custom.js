@@ -1,4 +1,4 @@
-// this works - not sure what the point of the buttons are!
+// this doesnt work cant access the parerntctrl - not sure what the point of the buttons are!
 
 
 (function () {
