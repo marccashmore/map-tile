@@ -20,12 +20,14 @@
      function getQuery() {
          return vm.parentCtrl.mainSearchField;
      }
+     
    }]);
  
     app.component("prmSearchBarAfter", {
      bindings: {parentCtrl: '<'},
      controller: 'SearchBarAfterController',
-     template: `<div layout="row" layout-align="center center">
+     template: `<div ng-if="vm.parentCtrl.isFullView class="" style="">
+                    <div layout="row" layout-align="center center">
                           <md-card flex="80">
                           <md-card-title>
                               <md-card-title-text><span class="md-headline">
@@ -43,6 +45,7 @@
                               <md-button>Action 2</md-button>
                           </md-card-actions>
                           </md-card>
+                      </div>
                       </div>`
      
  
