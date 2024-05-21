@@ -26,7 +26,7 @@
     app.component("prmSearchBarAfter", {
      bindings: {parentCtrl: '<'},
      controller: 'SearchBarAfterController',
-     template: `<div ng-if="vm.parentCtrl.isFullView" class="" style="">
+     template: `<div ng-if="this.parentCtrl.isFullView" class="" style="">
                     <div layout="row" layout-align="center center">
                           <md-card flex="80">
                           <md-card-title>
